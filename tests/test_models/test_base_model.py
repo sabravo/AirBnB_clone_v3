@@ -1,16 +1,24 @@
 #!/usr/bin/python3
-"""Test BaseModel for expected behavior and documentation"""
-from datetime import datetime
-import inspect
-import models
-import pep8 as pycodestyle
+"""Test BaseModel for expected behaviorss and documentation"""
 import time
+from datetime import datetime, timedelta
+from models.base_model import BaseModel
 import unittest
-from unittest import mock
-BaseModel = models.base_model.BaseModel
-module_doc = models.base_model.__doc__
 
 
+class TestBaseModel(unittest.TestCase):
+    def test_datetime_attributes(self):
+        inst1 = BaseModel()
+        time.sleep(0.1)  # wait for 0.1 seconds
+        inst2 = BaseModel()
+        tic = inst1.created_at
+        toc = inst2.created_at
+        self.assertNotEqual(tic, toc)
+
+
+if __name__ == '__main__':
+    unittest.main()
+    
 class TestBaseModelDocs(unittest.TestCase):
     """Tests to check the documentation and style of BaseModel class"""
 
