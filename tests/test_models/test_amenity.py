@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the TestAmenityDocs classes
+Contains the TestAmenityDocs classes updated
 """
 
 from datetime import datetime
