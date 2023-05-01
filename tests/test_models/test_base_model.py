@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Test BaseModel for expected behaviors and documentation"""
+"""Test BaseModel for expected behaviorss and documentation"""
 import time
 from datetime import datetime, timedelta
 from models.base_model import BaseModel
